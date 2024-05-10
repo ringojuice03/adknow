@@ -1,0 +1,23 @@
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+.container {
+    background-color: aqua;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.user_input_tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.user_input_tab p {
+    margin: 0;
+    padding: 0;
+}

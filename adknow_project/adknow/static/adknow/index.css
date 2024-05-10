@@ -1,0 +1,18 @@
+.main-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.header {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navigation-links {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+

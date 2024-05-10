@@ -1,0 +1,14 @@
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+
+.container {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+
+
