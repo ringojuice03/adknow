@@ -7,26 +7,33 @@
         <form method="POST">
             {% csrf_token %}
             <div class="user_input_tab">
-                <p>{{ form.username.label_tag }} {{ form.username }}</p>
+                <p>{{ form.username.label_tag }} <br> {{ form.username }}</p>
                 {% if form.username.errors %}
                     <p>{{ form.username.errors }}</p>
                 {% endif %}
             </div>
             <br>
             <div class="user_input_tab">
-                <p>{{ form.password1.label_tag }} {{ form.password1 }}</p>
+                <p>{{ form.password1.label_tag }} <br> {{ form.password1 }}</p>
                 {% if form.password1.errors %}
                     <p>{{ form.password1.errors }}</p>
                 {% endif %}
             </div>
+            <br>
             <div class="user_input_tab">
-                <p>{{ form.password2.label_tag }} {{ form.password2 }}</p>
+                <p>{{ form.password2.label_tag }} <br> {{ form.password2 }}</p>
                 {% if form.password2.errors %}
                     <p>{{ form.password2.errors }}</p>
                 {% endif %}
-            </div>  
-            <button type="submit">Signup</button>
-            <a href="{% url 'registration:login' %}">Already have account?</a>
+            </div>
+            <br>
+            <div class="signup_button">
+                <button type="submit">Signup</button>
+            </div>
+            <br>
+            <div class="already_have_account">
+                <a href="{% url 'registration:login' %}">Already have account?</a>
+            </div>
         </form>
     </div>
 </body>

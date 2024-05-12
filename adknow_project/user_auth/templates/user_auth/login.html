@@ -11,20 +11,23 @@
                     <p>Username or password does not exist</p>
                 </div>
             {% endif %}
-
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="{{ form.username.name }}" class="form-control" required>
             </div>
-
+            <br>
             <div class="form-group">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="{{ form.password.name }}" class="form-control" required>
-                
             </div>
-            
-            <button type="submit" class="btn btn-primary">Login</button>
-            <a href="{% url 'registration:signup' %}" class="btn btn-link">Don't have an account? Create one</a>
+            <br>
+            <div class="login_button">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+            <br>
+            <div class="dont_have_account">
+                <a href="{% url 'registration:signup' %}" class="btn btn-link">Don't have an account? Create one</a>
+            </div>
         </form>
     </div>
     
