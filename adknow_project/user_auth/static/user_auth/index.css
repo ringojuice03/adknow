@@ -1,0 +1,127 @@
+/* Adknow.css */
+
+/* Base styles */
+
+  .main-screen {
+    background-color: #0e273b;
+    font-family: Inter, sans-serif;
+    color: #e5ecf0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__user-greeting {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.header__navigation-links {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+}
+
+.header__navigation-links a {
+    color: #e5ecf0;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.body {
+    margin-top: 100px;
+    background-color: #0E273B;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: normal;
+}
+
+  #chat-interface {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0; /* Light gray background for input and button */
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  #chat-input {
+    flex-grow: 1; /* Expand to fill available space */
+    border: none;
+    padding: 10px;
+    border-radius: 5px 0 0 5px; /* Round the left corners of the input */
+    margin: 0; /* Remove margin to align with the button */
+  }
+  
+  #send-btn {
+    background-color: #000066;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0; /* Round the right corners of the button */
+    cursor: pointer;
+    margin: 0; /* Remove margin to align with the input */
+  }
+  
+  /* Navigation styles */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  /* Tab styles */
+  .tab {
+    text-decoration: none;
+    color: #0E273B;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  .tab:hover {
+    transform: translateY(-3px);
+    background-color: #ddd;
+  }
+  
+  /* Additional styles for the tabs */
+  .tabs-container {
+    display: flex;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+  }

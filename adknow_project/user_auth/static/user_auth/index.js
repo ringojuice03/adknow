@@ -1,3 +1,4 @@
+"{% load static %}"
 // Assuming you have content for each tab (e.g., campusContent, officesContent, etc.)
 const campusContent = "Welcome to the campus section!";
 const officesContent = "Explore our various offices.";
