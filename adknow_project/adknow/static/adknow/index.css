@@ -1,3 +1,7 @@
+body {
+    height: 115vh; /* Set the height of the viewport */
+}
+
 .main-screen {
     background-color: #0e273b;
     font-family: Inter, sans-serif;
@@ -20,26 +24,166 @@
 }
 
 .header__navigation-links {
-    width: 200px;
+    width: 300px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: 7px;
+}
+
+.header__navigation-links p {
+    padding-left: 20px;
 }
 
 .header__navigation-links a {
     color: #e5ecf0;
     text-decoration: none;
     font-size: 20px;
+    background-color: #0e273b;
+    padding: 15px;
+    border-radius: 500px;
+}
+
+.header__navigation-links a:hover {
+    color: #0e273b;
+    background-color: #e5ecf0;
 }
 
 .body {
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .title {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.title img {
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
+}
+
+.title h1 {
     font-size: 70px;
     font-weight: normal;
 }
 
+/*---*/
+
+#chat-interface {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px; /* Add some spacing below the chat interface */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 1100px;
+    height: 65px;
+}
+
+#chat-input {
+    flex-grow: 1; /* Expand to fill available space */
+    border-radius: 15px;
+    height: 65px;
+    font-size: 20px;
+    padding-left: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5ecf0;
+    background-color: #0e273b;
+    color: #e5ecf0;
+}
+
+#send-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 65px;
+    height: 65px;
+    margin-left: 5px;
+}
+
+#send-btn img {
+    width: 65px;
+    height: 65px;
+}
+  
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the tabs */
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+nav ul li {
+    margin: 0 10px; /* Add horizontal space between each tab */
+}
+
+.nav-tab {
+    cursor: pointer;
+    text-decoration: none;
+    color: #e5ecf0; /* Dark blue color for tab text */
+    font-size: 20px;
+    font-weight: normal;
+    background-color: #0e273b;
+    padding: 15px;
+    border: none;
+    border-radius: 500px;
+}
+
+.nav-tab:hover {
+    color: #0e273b; /* Dark blue color for tab text */
+    background-color: #e5ecf0;
+}
+
+.tabs-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+    overflow: hidden; /* Hide overflow from rounded corners */
+    width: 895px;
+    height: 225px;
+}
+
+.cont-tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add sliding animation */
+    text-decoration: none;
+    color: #e5ecf0;
+    font-size: 20px;
+    font-weight: normal;
+    background-color: #0e273b;
+    padding: 15px 15px 15px 15px;
+    border: none;
+    width: 425px;
+    height: 95px;
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e5ecf0;
+    border-radius: 15px;
+}
+
+.cont-tab:hover {
+    transform: translateY(-3px); /* Move up slightly on hover */
+    background-color: #e5ecf0;
+    color: #0e273b;
+}
+
+.cont-tab p {
+    font-size: 17px;
+    color: 7d7d7d;
+}
