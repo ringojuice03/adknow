@@ -1,5 +1,27 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'adknow/conversation.css' %}">
-<script src="{% static 'adknow/conversation.js' %}"></script>
-
-<h1>This is the conversation interface</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'user_auth/conversation.css' %}">
+    
+</head>
+<body>
+    <div id="chat" class="container"></div>
+    <input id="input" type="text" onkeydown="if(event.key === 'Enter') addMessage()" placeholder="Type a message...">
+    <script>
+        function addMessage() {
+            var input = document.getElementById('input');
+            var chat = document.getElementById('chat');
+            var userDiv = document.createElement('div');
+            userDiv.textContent = input.value;
+            userDiv.className = 'message user';
+            chat.appendChild(userDiv);
+            var programDiv = document.createElement('div');
+            programDiv.textContent = 'Hello there, Lorem ipsum';
+            programDiv.className = 'message program';
+            chat.appendChild(programDiv);
+            input.value = '';
+        }
+    </script>
+</body>
+</html>
