@@ -17,12 +17,20 @@
             var input = document.getElementById('input');
             var chat = document.getElementById('chat');
             var userDiv = document.createElement('div');
+            var userLabel = document.createElement('div');
+            userLabel.textContent = 'User';
+            userLabel.className = 'message user-label';
             userDiv.textContent = input.value;
             userDiv.className = 'message user';
+            chat.appendChild(userLabel);
             chat.appendChild(userDiv);
             var programDiv = document.createElement('div');
+            var programLabel = document.createElement('div');
+            programLabel.textContent = 'AdKnow';
+            programLabel.className = 'message program-label';
             programDiv.textContent = 'Hello there, Lorem ipsum';
             programDiv.className = 'message program';
+            chat.appendChild(programLabel);
             chat.appendChild(programDiv);
             input.value = '';
         }

@@ -86,6 +86,26 @@ body {
     font-size: 17px;
 }
 
+.user-label {
+    color: #e5ecf0;
+    justify-content: flex-end;
+    margin-left: auto;
+    padding: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.program-label {
+    color: #e5ecf0;
+    justify-content: flex-start;
+    margin-right: auto;
+    padding: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .user {
     background-color: #e5ecf0;
     justify-content: flex-end;
@@ -93,8 +113,8 @@ body {
 }
 
 .program {
-    justify-content: flex-start;
     background-color: #e5ecf0;
+    justify-content: flex-start;
     margin-right: auto;
 }
 
