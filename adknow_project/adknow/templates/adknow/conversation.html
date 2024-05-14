@@ -1,13 +1,17 @@
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="{% static 'user_auth/conversation.css' %}">
-    
-</head>
+<link rel="stylesheet" href="{% static 'adknow/conversation.css' %}">
+
 <body>
     <div id="chat" class="container"></div>
-    <input id="input" type="text" onkeydown="if(event.key === 'Enter') addMessage()" placeholder="Type a message...">
+    <div class="chatbox">
+        <div class="ssbtn-container">
+            <img id="ssbtn" src="{% static 'icons/screenshot_button.png' %}" alt="Screenshot button">
+        </div>
+        <input id="input" type="text" onkeydown="if(event.key === 'Enter') addMessage()" placeholder="Type a message...">
+        <div class="sendbtn-container">
+            <button id="send-btn" onclick="addMessage()"><img src="{% static 'icons/send_button.png' %}" alt="Send button"></button>
+        </div>
+    </div>
     <script>
         function addMessage() {
             var input = document.getElementById('input');
@@ -24,4 +28,3 @@
         }
     </script>
 </body>
-</html>

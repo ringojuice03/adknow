@@ -5,7 +5,7 @@ const academicsContent = "Discover our academic programs.";
 const historyContent = "Learn about our rich history.";
 
 const contentDiv = document.getElementById('content');
-const tabs = document.querySelectorAll('.tab');
+const tabs = document.querySelectorAll('.nav-tab');
 
 tabs.forEach(tab => {
   tab.addEventListener('click', function (e) {
@@ -20,7 +20,7 @@ function switchTab(target) {
   contentDiv.innerHTML = '';
 
   // Show content based on the selected tab
-  switch (target) {
+  /*switch (target) {
     case 'campus':
       contentDiv.innerHTML = campusContent;
       break;
@@ -35,7 +35,7 @@ function switchTab(target) {
       break;
     default:
       break;
-  }
+  }*/
 }
 
 function showContent(option) {
@@ -51,6 +51,9 @@ function showContent(option) {
         break;
       case 'option3':
         contentDiv.innerHTML = '<p>Content for Option 3</p>';
+        break;
+      case 'option4':
+        contentDiv.innerHTML = '<p>Content for Option 4</p>';
         break;
       default:
         break;
@@ -75,7 +78,7 @@ function addMessage() {
 // Adknow.js
 function redirectToSecondPage() {
   // Replace "second_page.html" with the actual filename or path of the second HTML file
-  window.location.href = "{% static 'adknow/conversation.html' %}";
+  window.location.href = "conversation";
 }
 
 // Adknow.js

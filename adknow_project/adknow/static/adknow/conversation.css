@@ -1,10 +1,8 @@
-/* Adknow.css */
-
 /* Base styles */
 body {
-    background-color: #0f172a;
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0e273b;
+    color: #e5ecf0;
+    font-family: Inter, sans-serif;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -16,17 +14,64 @@ body {
 
 #chat {
     width: 100%;
-    max-width: 600px;
-    margin: 2in auto;
-    background-color: #1e293b;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    background-color: transparent; /*#1e293b*/
+    border-radius: 15px;
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 0;
-    max-height: calc(100vh - 80px);
     overflow-y: auto;
+    margin: 50px 0 225px 0;
+}
+
+.chatbox {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 100px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.ssbtn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 65px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #e5ecf0;
+}
+
+#ssbtn {
+    width: 47px;
+    height: 40px;
+}
+
+.sendbtn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    border-style: none;
+}
+
+#send-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 65px;
+    height: 65px;
+    margin-left: 5px;
+}
+
+#send-btn img {
+    width: 65px;
+    height: 65px;
 }
 
 .message {
@@ -34,40 +79,45 @@ body {
     margin: 10px 20px;
     margin-bottom: 20px;
     padding: 10px;
-    border-radius: 16px;
+    border-radius: 500px;
     position: relative;
-    color: #1e293b;
+    color: #0e273b;
     display: flex;
+    font-size: 17px;
 }
 
 .user {
-    background-color: #a5f3fc;
+    background-color: #e5ecf0;
     justify-content: flex-end;
     margin-left: auto;
 }
 
 .program {
     justify-content: flex-start;
-    background-color: #bae6fd;
+    background-color: #e5ecf0;
     margin-right: auto;
 }
 
 /* Input field styling */
 #input {
     width: 100%;
-    max-width: 600px;
-    padding: 15px 20px;
-    border-radius: 50px;
-    font-size: 16px;
+    max-width: 1100px;
+    height: 65px;
+    padding-left: 30px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5ecf0;
+    background-color: #0e273b;
+    font-size: 20px;
     outline: none;
-    background-color: #334155;
-    color: #ffffff;
-    border: none;
+    color: #e5ecf0;
     position: sticky;
     bottom: 20px;
+    margin: 0 0 0 10px;
 }
 
 /* Placeholder text color */
 #input::placeholder {
-    color: #94a3b8;
+    color: #7d7d7d;
 }

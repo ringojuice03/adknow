@@ -1,17 +1,5 @@
 {% load static %}
 
-
-<!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" href="{% static 'user_auth/index.css' %}">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdKnow Chatbot</title>
-</head>
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,64 +7,59 @@
     <link rel="stylesheet" href="{% static 'adknow/index.css' %}">
 </head>
 <body class="main-screen">
-  <div class="header">
-    <div class="header__user-greeting">
-        {% if request.user.is_authenticated %}
-            <p>Hello there, {{ request.user.username }}</p>
-        {% endif %}
-    </div>
-    <div class="header__navigation-links">
-        <p><a href="{% url 'home:about-us' %}">About Us</a></p>
-        {% if request.user.is_authenticated %}
-            <p><a href="{% url 'registration:logout' %}">Logout</a></p>
-        {% else %}
-            <p><a href="{% url 'registration:signup' %}">Signup</a></p>
-        {% endif %}
-    </div>
-  </div>
-  <div class="body">
-    <h1 class="title">AdKnow</h1>
-    <div id="chat-interface">
-      <form id="chat-form" class="input-container">
-          <input type="text" id="chat-input" placeholder="Type message...">
-          
-          <button id="send-btn" onclick="redirectToSecondPage()">
-            <a href="{% url 'home:conversation' %}">
-            Send
-            </a>
-          </button>
-        
-
-      </form>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#campus" class="tab">Campus</a></li>
-            <li><a href="#offices" class="tab">Offices</a></li>
-            <li><a href="#academics" class="tab">Academics</a></li>
-            <li><a href="#history" class="tab">History</a></li>
-        </ul>
-    </nav>
-    <div id="content">
-        <!-- Content for each tab goes here -->
-    </div>
-    <div class="tabs-container">
-        <div class="tab-box">
-            <button class="tab" onclick="showContent('option1')">Option 1</button>
+    <div class="header">
+        <div class="header__user-greeting">
+            {% if request.user.is_authenticated %}
+                <p>Hello there, {{ request.user.username }}</p>
+            {% endif %}
         </div>
-        <div class="tab-box">
-            <button class="tab" onclick="showContent('option2')">Option 2</button>
-        </div>
-        <div class="tab-box">
-            <button class="tab" onclick="showContent('option3')">Option 3</button>
-        </div>
-        <div class="tab-box">
-            <button class="tab" onclick="showContent('option4')">Option 4</button>
+        <div class="header__navigation-links">
+            <p><a href="{% url 'home:about-us' %}">About Us</a></p>
+            {% if request.user.is_authenticated %}
+                <p><a href="{% url 'registration:logout' %}">Logout</a></p>
+            {% else %}
+                <p><a href="{% url 'registration:signup' %}">Signup</a></p>
+            {% endif %}
         </div>
     </div>
-  </div>
-        
-  <script src="{% static 'adknow/index.js' %}" async></script>
+    <div class="body">
+        <div class="title">
+            <img src="{% static 'icons/adknow_logo.png' %}" alt="AdKnow logo">
+            <h1>AdKnow</h1>
+        </div>
+        <main>
+            <div id="chat-interface">
+              <form id="chat-form" class="input-container">
+                <input type="text" id="chat-input" placeholder="Type message...">
+                <button id="send-btn" onclick="redirectToSecondPage()"><img src="{% static 'icons/send_button.png' %}" alt="Send button"></button>
+              </form>
+            </div>
+            <nav>
+              <ul>
+                <li><a href="#campus" class="nav-tab">Campus</a></li>
+                <li><a href="#offices" class="nav-tab">Offices</a></li>
+                <li><a href="#academics" class="nav-tab">Academics</a></li>
+                <li><a href="#history" class="nav-tab">History</a></li>
+              </ul>
+            </nav>
+            <div id="content">
+              <!-- Content for each tab goes here -->
+            </div>
+            <div class="tabs-container">
+                <div class="tab-box">
+                    <button class="cont-tab" onclick="redirectToSecondPage()">Option 1<p>Option 1 Description</p></button>
+                </div>
+                <div class="tab-box">
+                    <button class="cont-tab" onclick="redirectToSecondPage()">Option 2<p>Option 2 Description</p></button>
+                </div>
+                <div class="tab-box">
+                    <button class="cont-tab" onclick="redirectToSecondPage()">Option 3<p>Option 3 Description</p></button>
+                </div>
+                <div class="tab-box">
+                    <button class="cont-tab" onclick="redirectToSecondPage()">Option 4<p>Option 4 Description</p></button>
+                </div>
+            </div>
+        </main>
+        <script src="{% static 'adknow/index.js' %}" async></script>
+    </div>
 </body>
-</html>
-
